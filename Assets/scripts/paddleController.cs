@@ -31,7 +31,8 @@ public class paddleController : MonoBehaviour {
         Vector3 position = transform.position;
 
         position.x = Mathf.Clamp (position.x, -xMax, xMax);
-        transform.position = position;
+        transform.position = position; 
+
 	}
 
     void MoveLeft()
