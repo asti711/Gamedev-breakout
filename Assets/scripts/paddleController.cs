@@ -32,7 +32,7 @@ public class paddleController : MonoBehaviour {
 
         position.x = Mathf.Clamp (position.x, -xMax, xMax);
         transform.position = position; 
-
+         
 	}
 
     void MoveLeft()

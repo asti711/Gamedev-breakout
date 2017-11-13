@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class brickController : MonoBehaviour {
 
+    public Manager manager;
 	// Use this for initialization
 	void Start () {
-		
+        manager = GameObject.FindWithTag("Manager").GetComponent<Manager>();
 	}
 	
 	// Update is called once per frame
@@ -18,6 +20,7 @@ public class brickController : MonoBehaviour {
     {
         if(col.gameObject.tag == "Ball")
         {
+            manager.incScore();
             Destroy(gameObject);
         }
     }
