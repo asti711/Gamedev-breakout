@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class brickController : MonoBehaviour {
 
-    public Manager manager;
+    public managerController manager;
 	// Use this for initialization
 	void Start () {
-        manager = GameObject.FindWithTag("Manager").GetComponent<Manager>();
+        manager = GameObject.FindWithTag("Manager").GetComponent<managerController>();
 	}
 	
 	// Update is called once per frame
@@ -16,7 +16,7 @@ public class brickController : MonoBehaviour {
 		
 	}
 
-    void OnCollisionEnter2D(Collision2D col)
+    void OnCollisionEnter(Collision col)
     {
         if(col.gameObject.tag == "Ball")
         {
